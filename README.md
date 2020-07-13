@@ -1,4 +1,4 @@
-##React App to Track COVID-19 Cases Globally and country-wise!!!
+## React App to Track COVID-19 Cases Globally and country-wise!!!
 
 
 
