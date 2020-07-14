@@ -2,18 +2,18 @@
     margin:100px 0px;
 
 }
-h1{
-    text-align: center;
-    color: darkorange;
-    font-size: 2em;
-    text-decoration: underline;
-    
-}
 
 .card{
+    /* padding:5px 5px 5px 5px; */
     margin-bottom:  40px !important;
     margin-right:  15px !important;
+    /* text-align: center; */
+    /* justify-content: center; */
 
+}
+
+.cardlist2{
+    padding: 20px 20px 20px 20px;
 }
 
 .infected{

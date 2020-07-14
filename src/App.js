@@ -7,9 +7,10 @@ import {Chart, Cards, CountryPicker} from './components';
 import './App.css';
 import {fetchData, fetchIndiaData} from './api';
 import Particles from 'react-particles-js';
+import Footer from './components/Footer/Footer.jsx';
 
 
-import CardsInd from './components/CardsInd/CardsInd';
+// import CardsInd from './components/CardsInd/CardsInd';
 import IndiaData from './components/IndiaData/IndiaData';
 import MyTable from './components/Table/Table';
 
@@ -121,6 +122,8 @@ class App extends React.Component {
               
                     <h1 id="indian" className="heading">COVID STATS IN INDIA</h1>
                     <IndiaData data={data}  indiaconfirmed={this.state.indiadata} />
+
+                    <p className="heading" id="select">Select any state to see that state's data</p>
                     <MyTable />
           
                      <h1 id="global" className="heading">COVID STATS GLOBALLY</h1>
@@ -129,6 +132,11 @@ class App extends React.Component {
                     
                     <CountryPicker handleCountryChange={this.handleCountryChange}/>
                     <Chart data={data} country={country} />
+
+                    <br>
+                    </br>
+
+                    <Footer/>
         
 
 

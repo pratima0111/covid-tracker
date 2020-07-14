@@ -94,7 +94,7 @@ const MyTable = () => {
                             <option value="Bihar">Bihar</option>
                 
                         </select> */}
-                        <p className= {styles.stateWise}   >State-Wise Data</p>
+                        {/* <p className= {styles.stateWise}   >State-Wise Data</p> */}
                         <div   className={styles.dropDown} >
                             
                         <NativeSelect  defaultValue="" onChange={(e) => handleStateChange(e.target.value)}><br></br>
@@ -151,13 +151,15 @@ const MyTable = () => {
                                     
                                     {row.provinceState===currentValue
                                     ?<>
-                                    <StyledTableCell  className="StateHeading" component="th" scope="row">
-                                    <span className={styles.tableHead}  >STATE   :   </span>{row.provinceState}
-                                    </StyledTableCell><br></br>
-                                    <StyledTableCell align="left"><div className={styles.tableHead}>CONFIRMED   : </div>{row.confirmed}<br></br></StyledTableCell><br></br>
-                                    <StyledTableCell align="left"><span className={styles.tableHead}>ACTIVE   : </span>{row.active}</StyledTableCell><br></br>
-                                    <StyledTableCell align="left"><span className={styles.tableHead}>RECOVERED   : </span>{row.recovered}</StyledTableCell><br></br>
-                                    <StyledTableCell align="left"><span className={styles.tableHead}>DEATHS   : </span>{row.deaths}</StyledTableCell><br></br>
+                            
+                                        <StyledTableCell  className="StateHeading" component="th" scope="row">
+                                        <span className={styles.tableHead}  >STATE :  {row.provinceState} </span>
+                                        </StyledTableCell><br></br>
+                                        <StyledTableCell align="center"><div className={styles.tableHead}>CONFIRMED  :  {row.confirmed}</div></StyledTableCell><br></br>
+                                        <StyledTableCell align="center"><span className={styles.tableHead}>ACTIVE  :  {row.active} </span></StyledTableCell><br></br>
+                                        <StyledTableCell align="center"><span className={styles.tableHead}>RECOVERED  :  {row.recovered}</span></StyledTableCell><br></br>
+                                        <StyledTableCell align="center"><span className={styles.tableHead}>DEATHS  :  {row.deaths}</span></StyledTableCell><br></br>
+                                   
                                     </>
                                     :<></>
                                     }
