@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 const url = 'https://covid19.mathdro.id/api';
+const indiaUrl='https://covid19.mathdro.id/api/countries/India/confirmed';
 
 export const fetchData = async(country) => {
 
@@ -36,6 +37,28 @@ export const fetchDailyData = async () => {
             console.log(error)
         }
     }
+
+
+    export const fetchStateData = async () => {
+        try{
+            const response = await axios.get(`${indiaUrl}`);
+            return response;
+        }
+        catch(error){
+            console.log(error)
+        }
+    }
+    export const fetchIndiaData = async () => {
+        try{
+            const response = await axios.get(`${url}/countries/india`);
+            return response;
+        }
+        catch(error){
+            console.log(error)
+        }
+    }
+
+
 
 
 export const fetchCountries = async () => {

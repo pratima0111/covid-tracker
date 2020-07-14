@@ -2,7 +2,13 @@
     margin:100px 0px;
 
 }
-
+h1{
+    text-align: center;
+    color: darkorange;
+    font-size: 2em;
+    text-decoration: underline;
+    
+}
 
 .card{
     margin-bottom:  40px !important;
