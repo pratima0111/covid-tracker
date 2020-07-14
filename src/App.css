@@ -5,6 +5,15 @@ body{
     
 }
 
+.heading{
+  display: flex;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-right: auto;
+  margin-left: auto;
+  text-shadow: 2px 2px cadetblue;
+}
+
 .container{
     margin-top: 45px;
     display:flex;
@@ -13,9 +22,49 @@ body{
     flex-direction: column;
 }
 
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding:14px 16px;
+  text-shadow: 2px 2px 4px bisque;
+  text-decoration: none;
+  font-size:20px;
+}
+li a:hover{
+  color:paleturquoise;
+
+}
+
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+
 .image {
     width: 370px;
-    margin-top: 15px;
+    margin-top: 45px;
     margin-bottom: 35px;
   }
   
@@ -36,3 +85,21 @@ body{
     left:0;
     z-index:-10;
 }
+
+#right{
+  color: black;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  /* text-align: center; */
+  padding: 14px 16px;
+  
+  font-size: 20px;
+
+  
+  float: left;
+
+
+ }
+
+ #right:hover{
+   cursor:pointer;
+ }
