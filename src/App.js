@@ -5,8 +5,14 @@ import React from 'react';
 
 import {Chart, Cards, CountryPicker} from './components';
 import './App.css';
-import {fetchData} from './api';
+import {fetchData, fetchIndiaData} from './api';
 import Particles from 'react-particles-js';
+import IndiaData from './components/IndiaData/IndiaData';
+import MyTable from './components/Table/Table';
+
+
+
+
 
 
 const particlesOptions ={
@@ -50,12 +56,29 @@ class App extends React.Component {
     state = {
         data: {},
         country: '',
+        // showIndia:false,
+        // showGlobal:true,
+        // glc:false,
     }
-
+    // onShowIndiaClick=()=>{
+    //     this.setState({showIndia:true})
+    //     this.setState({showGlobal:false})
+    // }
+    // onShowGlobalClick= async()=>{
+    //     this.setState({ showIndia: false })
+    //     this.setState({ showGlobal: true })
+    //     // this.setState({glc:true})
+    // }
     async componentDidMount(){
         const fetchedData = await fetchData();
+        const fetchedIndiaData = await fetchIndiaData();
+
+        
         this.setState({data : fetchedData});
+        this.setState({indiadata : fetchedIndiaData.data.confirmed.value});
+        
     }
+    
 
     handleCountryChange = async (country) => {
         const fetchedData = await fetchData(country);
@@ -75,12 +98,21 @@ class App extends React.Component {
 
 
                 <img src="https://i.ibb.co/7QpKsCX/image.png" alt="covid-19" className="image"/>
+                {/* <button onClick={this.onShowIndiaClick}  > India </button>
+                <button onClick={this.componentDidMount}  > India </button> */}
+              
+                    <IndiaData data={data}  indiaconfirmed={this.state.indiadata} />
+                    <MyTable />
+                     <Cards data={data}    />
+                    
+                    
+                    <CountryPicker handleCountryChange={this.handleCountryChange}/>
+                    <Chart data={data} country={country} />
                 
-                <Cards data={data}/>
                 
-                <CountryPicker handleCountryChange={this.handleCountryChange}/>
 
-                <Chart data={data} country={country} />
+
+                
             </div>
         )
     }

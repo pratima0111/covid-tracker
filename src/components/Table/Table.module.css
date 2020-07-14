@@ -1,0 +1,47 @@
+.container{
+    width:100%;
+    justify-content: center;
+    align-items:center;
+    margin:2px;
+    margin-top: 50px;
+
+}
+.stateHeading{
+    text-align: center;
+}
+.dropDown{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.tableContainer{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* text-align: center; */
+}
+.stateWise{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* display: inline; */
+    font-size: 2.5em;
+    text-align: center;
+    text-decoration: solid;
+    color: darkred;
+    box-shadow: darkred;
+    border-bottom: darkred;
+    border-right: darkred;
+    border-width: 2px;
+    border-style: outset;
+    padding-left: 0;
+   
+    /* border-style: solid; */
+
+}
+.tableHead{
+    font-size: 1.5em;
+}
