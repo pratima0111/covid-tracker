@@ -2,16 +2,18 @@ body{
     background: #43C6AC;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #F8FFAE, #43C6AC);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #F8FFAE, #43C6AC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
+    margin:0px 0px;
 }
 
 .heading{
   display: flex;
   align-items: center;
+  color:black;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin-right: auto;
   margin-left: auto;
   text-shadow: 2px 2px cadetblue;
+  margin-top: 10px;
 }
 
 .container{

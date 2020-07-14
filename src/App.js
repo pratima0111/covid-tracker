@@ -123,21 +123,13 @@ class App extends React.Component {
                     <IndiaData data={data}  indiaconfirmed={this.state.indiadata} />
                     <MyTable />
           
-                     <h1  className="heading">COVID STATS GLOBALLY</h1>
+                     <h1 id="global" className="heading">COVID STATS GLOBALLY</h1>
                      <Cards data={data}    />
                     
                     
                     <CountryPicker handleCountryChange={this.handleCountryChange}/>
                     <Chart data={data} country={country} />
-                
-
-
-                <img  id="global" src="https://i.ibb.co/7QpKsCX/image.png" alt="covid-19" className="image"/>
-
-               
-                
-//                 <Cards data={data} />
-                
+        
 
 
             </div>

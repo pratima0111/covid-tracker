@@ -146,19 +146,6 @@ const MyTable = () => {
                        <div  className={styles.tableContainer}>
                            
 
-
-
-
-
-
-
-
-
-
-
-
-
-
                             {dataa && dataa.map((row) => (
                                 <div  key={row.name}>
                                     

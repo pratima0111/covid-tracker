@@ -73,15 +73,3 @@ export const fetchCountries = async () => {
 }
 
 
-export const fetchIndiaData = async () => {
-
-    try {
-        const response = await axios.get(`${url}/countries/india`);
-        return response;
-
-    } catch (error) {
-        console.log(error);
-
-    }
-
-}
