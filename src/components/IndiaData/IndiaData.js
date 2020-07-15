@@ -32,35 +32,35 @@ const IndiaData = ({data:{confirmed, recovered, deaths, lastUpdate}}) => {
         <div className="container">
                 {/* <img src="https://i.ibb.co/7QpKsCX/image.png" alt="covid-19" className="image"/> */}
                 <Grid container spacing={4} justify="center" >
-                    <Grid item component={Card} xs={12} md={4} className={cx(styles.card, styles.infected)}>
+                    <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.infected)}>
                         <CardContent>
-                            <Typography >Confirmed (INDIA)</Typography>
+                            <Typography color="textSecondary" >Confirmed</Typography>
                             <Typography variant="h5"><CountUp start={0} end={indiadata.confirmed.value} duration={2} separator="," /></Typography>
                             <Typography className={styles.percent} ><CountUp start={0} end={confirmpercent} duration={2} />% of Global Cases...</Typography>
-                            <Typography >{new Date(lastUpdate).toDateString()}</Typography>
-                            {/* <Typography variant="body2">Number of active cases of COVID-19</Typography> */}
+                            <Typography color="textSecondary" >{new Date(lastUpdate).toDateString()}</Typography>
+                            <Typography variant="body2">Number of active cases of COVID-19 in INDIA</Typography>
 
 
                         </CardContent>
                     </Grid>
-                    <Grid item component={Card} xs={12} md={4} className={cx(styles.card, styles.recovered)}>
+                    <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.recovered)}>
                         <CardContent>
-                            <Typography >Recovered (INDIA) </Typography>
+                            <Typography color="textSecondary" >Recovered </Typography>
                             <Typography variant="h5"><CountUp start={0} end={indiadata.recovered.value} duration={2} separator="," /></Typography>
                             <Typography className={styles.percent}><CountUp start={0} end={recoveredpercent} duration={2} />% of Global cases...</Typography>
-                            <Typography >{new Date(lastUpdate).toDateString()}</Typography>
-                            {/* <Typography variant="body2">Number of recovered cases of COVID-19</Typography> */}
+                            <Typography color="textSecondary">{new Date(lastUpdate).toDateString()}</Typography>
+                            <Typography variant="body2">Number of recovered cases of COVID-19 in INDIA</Typography>
 
                         </CardContent>
                     </Grid>
-                    <Grid item component={Card} xs={12} md={4}  className={cx(styles.card, styles.deaths)}>
+                    <Grid item component={Card} xs={12} md={3}  className={cx(styles.card, styles.deaths)}>
                         <CardContent>
-                            <Typography >Deaths (INDIA) </Typography>
+                            <Typography color="textSecondary" >Deaths  </Typography>
                             <Typography variant="h5"><CountUp start={0} end={indiadata.deaths.value} duration={2} separator="," /></Typography>
                             <Typography className={styles.percent}><CountUp start={0} end={deathpercent} duration={2} />% of Global Cases...</Typography>
                             
-                            <Typography >{new Date(lastUpdate).toDateString()}</Typography>
-                            {/* <Typography variant="body2">Number of deaths of COVID-19</Typography> */}
+                            <Typography color="textSecondary">{new Date(lastUpdate).toDateString()}</Typography>
+                            <Typography variant="body2">Number of deaths from COVID-19 in INDIA</Typography>
 
                         </CardContent>
                     </Grid>
