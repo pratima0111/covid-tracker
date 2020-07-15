@@ -1,5 +1,14 @@
 .container{
     display: flex;
-    justify-content: center;
-    width: 75%;
+    justify-content: flex-start;
+    margin: 0px 5px;
+    width: 80%;
+    align-self: center;
+    margin-top: 5vh;
 }
+@media only screen and (max-width: 770px) {
+    .container{
+        width: 125%;
+    }
+    
+  }

@@ -109,28 +109,34 @@ class App extends React.Component {
                 <Particles  className='particles'
                      params={particlesOptions}/>
 
-                <ul>
+                
+                <ul className='navbar' >
                     <li><a href="#global">Global Stats</a></li>
-                    <li><a href="#indian">Indian Stats</a></li>
+                    <li><a href="#indian">Indian Stats</a></li><br></br>
                     <li id="right">COVID-19 TRACKER</li>
                 </ul>
+               <br></br>
+                
+                
+
 
 
                 <img src="https://i.ibb.co/7QpKsCX/image.png" alt="covid-19" className="image"/>
                 {/* <button onClick={this.onShowIndiaClick}  > India </button>
                 <button onClick={this.componentDidMount}  > India </button> */}
               
-                    <h1 id="indian" className="heading">COVID STATS IN INDIA</h1>
+                    <h2 id="indian" className="heading">COVID STATS IN INDIA</h2>
                     <IndiaData data={data}  indiaconfirmed={this.state.indiadata} />
-
+                    <br></br>
                     <p className="heading" id="select">Select any state to see that state's data</p>
                     <MyTable />
           
-                     <h1 id="global" className="heading">COVID STATS GLOBALLY</h1>
+                     <h2 id="global" className="heading">COVID STATS GLOBALLY</h2>
+                     <CountryPicker handleCountryChange={this.handleCountryChange}/>
                      <Cards data={data}    />
                     
                     
-                    <CountryPicker handleCountryChange={this.handleCountryChange}/>
+                    {/* <CountryPicker handleCountryChange={this.handleCountryChange}/> */}
                     <Chart data={data} country={country} />
 
                     <br>
