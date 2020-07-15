@@ -106,7 +106,7 @@ const MyTable = () => {
                             <option value="Bihar">Bihar</option>
                             <option value="Chandigarh">Chandigarh</option>
                             <option value="Chhattisgarh">Chhattisgarh</option>
-                            <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli and Daman and Diu</option>
+                            <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
                             <option value="Delhi">Delhi</option>
                             <option value="Goa">Goa</option>
                             <option value="Gujarat">Gujarat</option>

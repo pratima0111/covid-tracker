@@ -25,9 +25,9 @@ const IndiaData = ({data:{confirmed, recovered, deaths, lastUpdate}}) => {
     if(!confirmed){
         return 'Loading...';
     }
-    var confirmpercent = (indiadata.confirmed.value * 100 / confirmed.value).toFixed(0)
-    var recoveredpercent = (indiadata.recovered.value * 100 / recovered.value).toFixed(0)
-    var deathpercent = (indiadata.deaths.value * 100 / deaths.value).toFixed(0)
+    // var confirmpercent = (indiadata.confirmed.value * 100 / confirmed.value).toFixed(0)
+    // var recoveredpercent = (indiadata.recovered.value * 100 / recovered.value).toFixed(0)
+    // var deathpercent = (indiadata.deaths.value * 100 / deaths.value).toFixed(0)
     return (
         <div className="container">
                 {/* <img src="https://i.ibb.co/7QpKsCX/image.png" alt="covid-19" className="image"/> */}
@@ -36,7 +36,7 @@ const IndiaData = ({data:{confirmed, recovered, deaths, lastUpdate}}) => {
                         <CardContent>
                             <Typography color="textSecondary" >Confirmed</Typography>
                             <Typography variant="h5"><CountUp start={0} end={indiadata.confirmed.value} duration={2} separator="," /></Typography>
-                            <Typography className={styles.percent} ><CountUp start={0} end={confirmpercent} duration={2} />% of Global Cases...</Typography>
+                            {/* <Typography className={styles.percent} ><CountUp start={0} end={confirmpercent} duration={2} />% of Global Cases...</Typography> */}
                             <Typography color="textSecondary" >{new Date(lastUpdate).toDateString()}</Typography>
                             <Typography variant="body2">Number of active cases of COVID-19 in INDIA</Typography>
 
@@ -47,7 +47,7 @@ const IndiaData = ({data:{confirmed, recovered, deaths, lastUpdate}}) => {
                         <CardContent>
                             <Typography color="textSecondary" >Recovered </Typography>
                             <Typography variant="h5"><CountUp start={0} end={indiadata.recovered.value} duration={2} separator="," /></Typography>
-                            <Typography className={styles.percent}><CountUp start={0} end={recoveredpercent} duration={2} />% of Global cases...</Typography>
+                            {/* <Typography className={styles.percent}><CountUp start={0} end={recoveredpercent} duration={2} />% of Global cases...</Typography> */}
                             <Typography color="textSecondary">{new Date(lastUpdate).toDateString()}</Typography>
                             <Typography variant="body2">Number of recovered cases of COVID-19 in INDIA</Typography>
 
@@ -57,7 +57,7 @@ const IndiaData = ({data:{confirmed, recovered, deaths, lastUpdate}}) => {
                         <CardContent>
                             <Typography color="textSecondary" >Deaths  </Typography>
                             <Typography variant="h5"><CountUp start={0} end={indiadata.deaths.value} duration={2} separator="," /></Typography>
-                            <Typography className={styles.percent}><CountUp start={0} end={deathpercent} duration={2} />% of Global Cases...</Typography>
+                            {/* <Typography className={styles.percent}><CountUp start={0} end={deathpercent} duration={2} />% of Global Cases...</Typography> */}
                             
                             <Typography color="textSecondary">{new Date(lastUpdate).toDateString()}</Typography>
                             <Typography variant="body2">Number of deaths from COVID-19 in INDIA</Typography>

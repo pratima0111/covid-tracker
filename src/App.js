@@ -111,9 +111,10 @@ class App extends React.Component {
 
                 
                 <ul className='navbar' >
-                    <li><a href="#global">Global Stats</a></li>
-                    <li><a href="#indian">Indian Stats</a></li><br></br>
                     <li id="right">COVID-19 TRACKER</li>
+                    <li><a href="#global">Global Stats</a></li>
+                    <li><a href="#indian">Indian Stats</a></li>
+                   
                 </ul>
                <br></br>
                 

@@ -48,8 +48,11 @@ li a {
   color: white;
   text-align: center;
   padding-right: 20px;
+  padding-top: 5px;
   text-shadow: 2px 2px 4px bisque;
   text-decoration: none;
+  margin:0px 0px;
+  /* float: right; */
   /* font-size: 4vw; */
 
 }
@@ -59,6 +62,7 @@ li a {
   text-align: center;
   /* padding: 14px 16px; */
   padding-left: 5px;
+  padding-top: 5px;
   
   
   /* font-size: 20px; */
@@ -148,5 +152,5 @@ li a:hover:not(.active) {
  #indian{
   border-left: 6px solid red;
   background-color: lightgrey;
-  padding:4px 4px;
+  padding:3px 3px;
  }
