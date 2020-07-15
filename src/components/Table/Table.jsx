@@ -9,9 +9,9 @@ import TableCell from '@material-ui/core/TableCell';
 // import TableContainer from '@material-ui/core/TableContainer';
 // import TableHead from '@material-ui/core/TableHead';
 
-import TableRow from '@material-ui/core/TableRow';
+// import TableRow from '@material-ui/core/TableRow';
 // import TableColoumn from '@material-ui/core/TableColoumn';
-import {NativeSelect, FormControl} from '@material-ui/core';
+import {NativeSelect} from '@material-ui/core';
 
 import { fetchStateData } from '../../api';
 import styles from './Table.module.css';
@@ -42,13 +42,13 @@ const MyTable = () => {
         },
     }))(TableCell);
 
-    const StyledTableRow = withStyles((theme) => ({
-        root: {
-            '&:nth-of-type(odd)': {
-                backgroundColor: theme.palette.action.hover,
-            },
-        },
-    }))(TableRow);
+    // const StyledTableRow = withStyles((theme) => ({
+    //     root: {
+    //         '&:nth-of-type(odd)': {
+    //             backgroundColor: theme.palette.action.hover,
+    //         },
+    //     },
+    // }))(TableRow);
     const useStyles = makeStyles({
         table: {
             minWidth: 100,
@@ -75,7 +75,7 @@ const MyTable = () => {
 
         <div className={styles.container}>
             <div component={Paper}>
-                <div className={classes.table} stickyHeader aria-label="sticky table">
+                <div className={classes.table}  aria-label="sticky table">
                     {/* <TableHead>
                         <TableColoumn>
                             <StyledTableCell width='100'>States</StyledTableCell>
@@ -97,7 +97,7 @@ const MyTable = () => {
                         {/* <p className= {styles.stateWise}   >State-Wise Data</p> */}
                         <div   className={styles.dropDown} >
                             
-                        <NativeSelect  defaultValue="" onChange={(e) => handleStateChange(e.target.value)}><br></br>
+                        <NativeSelect  defaultValue="" onChange={(e) => handleStateChange(e.target.value)}>
                             <option value="">SELECT ANY STATE</option>
                             <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
                             <option value="Andhra Pradesh">Andhra Pradesh</option>
@@ -134,8 +134,7 @@ const MyTable = () => {
                             <option value="Uttaranchal">Uttaranchal</option>
                             <option value="Uttar Pradesh">Uttar Pradesh</option>
                             <option value="West Bengal">West Bengal</option>
-                            <br></br>
-                            <br></br>
+                            
                             
                         </NativeSelect>
                         </div>
@@ -147,7 +146,7 @@ const MyTable = () => {
                            
 
                             {dataa && dataa.map((row) => (
-                                <div  key={row.name}>
+                                <div  key={row.provinceState}>
                                     
                                     {row.provinceState===currentValue
                                     ?<>
